@@ -1,0 +1,7 @@
+.DS_Store
+.nodemonignore
+.sass-cache/
+node_modules/
+test/coverage/
+config/env/development.js
+*.bak

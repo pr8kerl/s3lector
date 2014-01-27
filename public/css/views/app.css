@@ -1,0 +1,97 @@
+/* app css stylesheet */
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.ng-cloak {
+  display: none;
+}
+
+body {
+  padding: 50px;
+  font-family: 'Ubuntu', Calibri, Helvetica, sans-serif;
+  color: #3c4246;
+  background-color: white;
+}
+#wrapper {
+  padding: 10px 30px 30px 30px;
+/*
+  border: 1px solid #dcdcdc;
+  width: 80%;
+  height: 80%;
+*/
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+#wrapper h1{
+    border-bottom: 1px solid #aaa;
+    padding:10px 0px 10px 0px;
+/*
+    margin:-10px -30px 0px -30px;
+    margin:-10px 0px 0px 0px;
+    background-color:#5c247b;
+*/
+    color:#75a81e;
+}
+thead {
+  border-bottom: 1px solid #aaa;
+}
+.page-header {
+  border-bottom: none;
+}
+.table td {
+  border-top: none;
+}
+#modaltable td {
+  border-top: none;
+}
+#buttonhref {
+                background-color: #75a81e;
+                color: #fff;
+                display: inline-block;
+                font-family: Ubuntu, Arial, Helvetica, sans-serif;
+                font-size: 1.3em;
+                padding: 8px 14px;
+                text-rendering: optimizeLegibility;     
+                text-decoration: none !important;     
+                border: none;
+}
+#buttonhref a:hover {
+                text-decoration: none !important;     
+                color: #fff;
+}
+button {
+                background-color: #75a81e;
+                color: #fff;
+                display: inline-block;
+                font-family: Ubuntu, Arial, Helvetica, sans-serif;
+                font-size: 1.3em;
+                padding: 8px 14px;
+                text-rendering: optimizeLegibility;     
+                border: none;
+}
+button.small{
+                background-color: #363C46;
+                font-size: 0.8em;
+}
+
+button.btn-disable{
+                background-color: #ff9c00;
+}
+#wraprow {
+  display: table;
+  padding: 30px 10px 5px 10px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+a.filelink {
+                text-decoration: none !important;     
+                color: #75a81e;
+}

@@ -1,0 +1,60 @@
+<section data-ng-controller="MusersController" data-ng-init="findOne()">
+
+  <div class="container" id="wrapper">
+  <h1>edit user</h1>
+  <div id="container-fluid">
+  <div class="row-fluid page-header">
+  </div>
+
+	<form class="form-horizontal" data-ng-submit="update()">
+    <div class="control-group">
+      <label class="control-label" for="provider">provider</label>
+      <div class="controls">
+        <span type="text" data-ng-model="muser.provider" id="provider" placeholder="provider">{{muser.provider}}</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="name">full name</label>
+      <div class="controls">
+        <input type="text" data-ng-model="muser.name" id="name" placeholder="name" required>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="username">username</label>
+      <div class="controls">
+        <input type="text" data-ng-model="muser.username" id="username" placeholder="username">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email">email</label>
+      <div class="controls">
+        <input type="text" data-ng-model="muser.email" id="email" placeholder="email">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="access">access</label>
+      <div class="controls">
+        <select data-ng-model="muser.access" id="access">
+          <option value="public">public</option>
+          <option value="private">private</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="admin">admin</label>
+      <div class="controls">
+				<button type="button" class="btn-primary" ng-model="muser.admin" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">admin?</button>
+        <pre data-ng-model="muser.admin" id="admin" placeholder="admin">{{ muser.admin }}</pre>
+      </div>
+    </div>
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn-primary">submit</button>
+			</div>
+		</div>
+	</form>
+
+  </div>
+  </div>
+
+</section>

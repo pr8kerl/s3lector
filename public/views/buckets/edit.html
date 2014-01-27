@@ -1,0 +1,62 @@
+<section data-ng-controller="BucketsController" data-ng-init="findOne()">
+
+  <div class="container" id="wrapper">
+  <h1>edit bucket</h1>
+  <div id="container-fluid">
+  <div class="row-fluid page-header">
+  </div>
+
+	<form class="form-horizontal" data-ng-submit="update()">
+    <div class="control-group">
+      <label class="control-label" for="name">name</label>
+      <div class="controls">
+        <input type="text" data-ng-model="bucket.name" id="name" placeholder="name" required>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="accessKeyId">accessKeyId</label>
+      <div class="controls">
+        <input type="password" data-ng-model="bucket.accessKeyId" id="accessKeyId" cols="30" placeholder="accessKeyId" required>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="secretAccessKey">secretAccessKey</label>
+      <div class="controls">
+        <input type="password" data-ng-model="bucket.secretAccessKey" id="secretAccessKey" cols="30" placeholder="secretAccessKey" required>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="region">region</label>
+      <div class="controls">
+        <input type="text" data-ng-model="bucket.region" id="region" placeholder="ap-southeast-2" required>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="prefix">prefix</label>
+      <div class="controls">
+        <input type="text" data-ng-model="bucket.prefix" id="prefix" placeholder="S3 key prefix (optional)" tooltip="limits the bucket listing to keys that begin with the specified prefix" tooltip-placement="right">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="access">access</label>
+      <div class="controls">
+        <select data-ng-model="bucket.access" id="access">
+          <option value="public">public</option>
+          <option value="private">private</option>
+        </select>
+
+      </div>
+    </div>
+
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn-primary">submit</button>
+			</div>
+		</div>
+	</form>
+
+  </div>
+  </div>
+
+</section>

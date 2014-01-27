@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "running deploy action hook"
+echo pwd: `pwd`
+echo HOME: $HOME
+echo OPENSHIFT_REPO_DIR: $OPENSHIFT_REPO_DIR
+HOME=${OPENSHIFT_REPO_DIR}
+export HOME
+echo HOME: $HOME
+
+XDG_CONFIG_HOME=${OPENSHIFT_REPO_DIR}/.local 
+XDG_DATA_HOME=${OPENSHIFT_REPO_DIR}/.local/share
+XDG_CACHE_HOME=${OPENSHIFT_REPO_DIR}/.local/cache
+
+export XDG_CONFIG_HOME XDG_DATA_HOME XDG_CACHE_HOME
+
+
+echo "copy passport-yammer strategy into place"
+cp ${OPENSHIFT_REPO_DIR}/config/yammer-strategy.js ${OPENSHIFT_REPO_DIR}/node_modules/passport-yammer/lib/passport-yammer/strategy.js

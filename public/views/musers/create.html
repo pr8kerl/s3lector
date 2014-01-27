@@ -1,0 +1,65 @@
+<section data-ng-controller="MusersController">
+
+  <div class="container" id="wrapper">
+  <h1>add a user</h1>
+  <div id="container-fluid">
+  <div class="row-fluid page-header">
+  </div>
+
+
+	<form class="form-horizontal" id="useradd" data-ng-submit="create()">
+		<div class="control-group">
+			<label class="control-label" for="name">full name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="mname" id="name" placeholder="name" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">email</label>
+			<div class="controls">
+				<input type="text" data-ng-model="memail" id="email" placeholder="email">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="username">username</label>
+			<div class="controls">
+				<input type="text" data-ng-model="musername" id="username" placeholder="username" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">password</label>
+			<div class="controls">
+				<input type="text" data-ng-model="mpassword" id="password" placeholder="password" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="access">access</label>
+			<div class="controls">
+        <select data-ng-model="maccess" id="access">
+          <option value="public">public</option>
+          <option value="private">private</option>
+        </select>
+			</div>
+		</div>
+<!--
+		<div class="control-group">
+			<label class="control-label" for="admin">admin</label>
+			<div class="controls">
+				<input type="text" data-ng-model="admin" id="admin" placeholder="false" tooltip="provide administrator priviledges" tooltip-placement="right"> 
+				<select data-ng-model="admin" id="admin" form="useradd" tooltip="provide administrator priviledges" tooltip-placement="right" value="false">
+					<option value="true">true</option>
+					<option value="false">false</option>
+				</select>
+			</div>
+		</div>
+-->
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn-primary">submit</button>
+			</div>
+		</div>
+	</form>
+
+</div>
+</div>
+</section>

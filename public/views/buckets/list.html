@@ -1,0 +1,38 @@
+<section data-ng-controller="BucketsController" data-ng-init="find()">
+	<div class="container" id="wrapper">
+  <h1>buckets</h1>
+	<div id="container-fluid">
+	<div class="row-fluid page-header">
+	<h3 data-ng-hide="!buckets || buckets.length">No buckets yet.</h3>
+	<p class="lead">configure a new bucket
+  <span class="lead" data-ng-show="buckets || buckets.length">or manage an old one below.</span></p>
+	</div>
+
+    <div >
+        <a class="btn" href="/#!/buckets/create" tooltip="add a bucket">
+          <i class="icon-plus"></i>
+        </a> 
+    </div>
+		<br>
+
+              <table class="table table-hover">
+              <thead>
+                <tr>
+                <td class="span9">configured buckets</td>
+                <td class="span3">  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="bucket in buckets">
+                  <td ng-cloak class="span9">{{bucket.name}}</td>
+                  <td ng-cloak class="span3"><a id="buttonhref" href="#!/buckets/{{bucket._id}}">more</a></td>
+                </tr>
+              </tbody>
+              </table>
+
+
+
+
+	</div>
+	</div>
+</section>

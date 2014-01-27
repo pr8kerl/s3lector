@@ -1,0 +1,23 @@
+
+* Fix aws signed url callback error check - done
+* Allow upsert upon bucket load
+
+* bucket deletion removes objects from DB
+
+* test use of multiple buckets
+
+* display registered users - done
+
+* log downloads
+* display log of downloads
+
+* Admin only menu links to buckets/users/logs.
+
+* Yammer login
+* Facebook login (ugh)
+
+User management? 
+* allow an admin to give access
+* predefine who can signup
+
+Allow an admin to upload files to S3

@@ -1,0 +1,51 @@
+<section data-ng-controller="BucketsController" data-ng-init="findOne()">
+
+  <div class="container" id="wrapper">
+  <h1>bucket</h1>
+  <div id="container-fluid">
+  <div class="row-fluid page-header">
+  <h2>{{bucket.name}}</h2>
+
+  </div>
+    <div data-ng-show="global.user._id == bucket.user._id">
+        <a class="btn" href="/#!/buckets/{{bucket._id}}/fill" tooltip="load objects into db from s3 bucket">
+        	<i class="icon-download"></i>
+        </a> 
+        <a class="btn" href="/#!/buckets/{{bucket._id}}/edit" tooltip="edit bucket">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();" tooltip="delete bucket">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+		<br>
+    <div>
+         <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <td>region</td>
+                  <td>{{bucket.region}}</td>
+                </tr>
+                <tr>
+                  <td>prefix</td>
+                  <td>{{bucket.prefix}}</td>
+                </tr>
+                <tr>
+                  <td>access</td>
+                  <td>{{bucket.access}}</td>
+                </tr>
+                <tr>
+                  <td>total files</td>
+                  <td>{{bucket.numObjects}}</td>
+                </tr>
+                <tr>
+                  <td>last import</td>
+                  <td>{{bucket.lastImport | date:'yyyy/MM/dd HH:mm:ss Z'}}</td>
+                </tr>
+              </tbody>
+         </table>
+		</div>
+
+	</div>
+	</div>
+</section>
