@@ -154,7 +154,7 @@ function bytesToSize(bytes) {
 
 exports.fill = function(req, res) {
 	var bucket = req.bucket;
-   console.log('fill bucket: %s',bucket);
+   console.log('fill bucket: %s',bucket.name);
 	// Set your region for future requests.
 	AWS.config.update({ accessKeyId: bucket.accessKeyId, secretAccessKey: bucket.secretAccessKey, region: bucket.region, sslEnabled:true });
 	var s3 = new AWS.S3();
@@ -169,6 +169,20 @@ exports.fill = function(req, res) {
 			res.jsonp(err);
 		}
 		else {
+
+      // we have a valid response - kill current objects for this bucket
+      console.log('fill dropping objects for bucket: %s',bucket.name);
+      S3Object.dropByBucket(bucket._id, function(err, bucket) {
+        if (err) {
+            util.log(req.user, "DEL ERR deleting objects of bucket " + bucket.name + " failed: " + err);
+            res.render('error', {
+                status: 500,
+								message: 'could not drop bucket objects: ' + bucket.name,
+								error: err
+            });
+				}
+      }); 
+
 			// pick only what we need out of the response
 			var m = 0;
 			var n = resp.Contents.length;
